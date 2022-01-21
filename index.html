@@ -1,0 +1,193 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+#label {
+    /* Other styling... */
+    /* text-align aligns the text to the right*/
+    text-align: left;
+    /*the label is pushed below elments to either side*/
+    clear: left;
+    /*the label will float to the left*/
+    float:left;
+    margin-right:15px;
+
+    height: 200px;
+    width:200px;
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+
+
+}
+
+#label2 {
+    /* Other styling... */
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+
+#submit{
+  background-color: green;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+}
+
+.body {
+  background-color: grey;
+}
+
+
+</style>
+</head>
+
+
+<body class = "body">
+
+  <div >
+    <h1 id = "title" class="center">Noun Forminator Stages 1-9</h1>
+    </div>
+
+    <div id="userNounInput">
+      <label id="label"></label>
+      <input type="text" id = "textBox" style="width:200px">
+      <br>
+      <label id="label2" style="display:none">Label2</label>
+      <input  type="text" id = "textBox2" style="display:none">
+      <br>
+      <button class = "submitBox" id = "submit"   onclick="userNounInput()">Submit</button>
+    </div>
+
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+-->
+
+<script type="text/javascript" src="stages1-9Nouns4.js" async></script>
+
+<!--
+<script>
+
+let ranNoun = new Noun(NounArray[0],NounArray[1],NounArray[2],NounArray[3],NounArray[4]);
+console.log(ranNoun.accusativePl)
+
+var score = 1
+//This resets all of the verbs and personal endings
+function reset (){
+
+
+
+}
+
+
+
+
+reset();
+
+
+function startGame(){
+  //the below block of code transforms the user's response into a lower case array
+  let answer = document.getElementById("textBox").value.toLowerCase();
+  //this regex removes periods, commas, and extra spaces
+  const trimmedAnswer = answer.replace(/[., ]+/g, " ").trim();
+  //this splits the user's answer into an array
+  const nounArray = trimmedAnswer.split(" ");
+  console.log(nounArray)
+  document.getElementById("label").innerHTML = nounArray;
+
+
+
+}
+
+
+
+function checkAnswer() {
+
+}
+
+/*
+var timeleft = 15;
+var countdown = setInterval(countDownTimer,1000);
+
+function countDownTimer(){
+
+document.getElementById("timer").style.color = "white";
+		document.getElementById("timer").innerHTML = timeleft;
+  		timeleft -= 1;
+  			if(timeleft <= 0)  {
+    			clearInterval(countdown);
+    			document.getElementById("timer").innerHTML = "Time's Up!";
+					document.getElementById("timer").style.color = "black";
+  }
+
+}
+
+//This stops the timer and resets it to 15 seconds
+function stopTimer() {
+
+  clearInterval(countdown);
+  document.getElementById("timer").innerHTML = "Timer";
+timeleft = 15;
+
+}
+
+stopTimer();
+
+*/
+
+
+/*
+Checklist for adding Progress Bar:
+1. Change head, style and body.
+2. Insert the movLength in the function resetSentence(); (through 149 and then change title at 194)
+3. Insert function restartGame() and the following lines of code through unHideProgressBar(); (355-403)
+4. Insert in function startGame():
+     unHideBackBox();
+     document.getElementById("box1").innerHTML = "Next!";
+     document.getElementById("box1").style.color = "black";
+5. Insert "move();" in the function giveAnswerOne();
+6. Change the count arry in the function giveAnswerOne() at if (count == 20)
+*/
+
+
+
+
+
+
+
+
+
+// This function restarts the game at the beginning on the click of the BackBox button.
+  function restartGame(){
+
+
+  }
+
+
+
+
+</script>
+-->
+</body>
+</html>
