@@ -145,7 +145,7 @@ class Noun {
       return this.genitive.slice(0,-1) + "ō";
     } else if (this.genitive.slice(-2,) == "is"){
       if (this.gender == "n"){
-        if (this.nominative.slice(-2,) == "re" || "al" || "re"){
+        if (this.nominative.slice(-2,) == "re" || this.nominative.slice(-2,) == "al"){
           return this.genitive.slice(0,-2) + "ī";
         } else {
         return this.genitive.slice(0,-2) + "e";
@@ -225,10 +225,10 @@ class Noun {
       }
     } else if (this.genitive.slice(-2,) == "is"){
         if (this.gender == "n"){
-          if (this.nominative.slice(-2,) == "re" || "al" || "re"){
+          if (this.nominative.slice(-2,) == "re" || this.nominative.slice(-2,) == "al"){
             return this.genitive.slice(0,-2) + "ia";
           } else {
-          return this.genitive.slice(0,-2) + "a";
+            return this.genitive.slice(0,-2) + "a";
           }
         } else {
           return this.genitive.slice(0,-2) + "ēs";
@@ -263,7 +263,7 @@ class Noun {
         if (this.nominative == "canis"){
             return this.genitive.slice(0,-2) + "um";
         } else if (this.gender == "n"){
-            if (this.nominative.slice(-2,) == "re" || "al" || "ar"){
+            if (this.nominative.slice(-2,) == "re" || this.nominative.slice(-2,) == "al"){
               return this.genitive.slice(0,-2) + "ium";
             } else {
               return this.genitive.slice(0,-2) + "um";
@@ -274,7 +274,7 @@ class Noun {
           return this.genitive.slice(0,-2) + "um";
         }
     } else if (this.genitive.slice(-2,) == "us"){
-        return this.genitive.slice(0,-2) + "ōrum";;
+        return this.genitive.slice(0,-2) + "uum";;
     }
   }
 
@@ -333,10 +333,12 @@ class Noun {
       }
     } else if (this.genitive.slice(-2,) == "is"){
         if (this.gender == "n"){
-          if (this.nominative.slice(-2,) == "re" || "al" || "re"){
+          if (this.nominative.slice(-2,) == "re" || this.nominative.slice(-2,) == "al"){
+            console.log(nominative.slice(-2,));
             return this.genitive.slice(0,-2) + "ia";
           } else {
-          return this.genitive.slice(0,-2) + "a";
+            console.log(nominative.slice(-2,));
+            return this.genitive.slice(0,-2) + "a";
           }
         } else {
           return this.genitive.slice(0,-2) + "ēs";
@@ -401,7 +403,7 @@ class Noun {
       }
     } else if (this.genitive.slice(-2,) == "is"){
       if (this.gender == "n"){
-        if (this.nominative.slice(-2,) == "re" || "al" || "re"){
+        if (this.nominative.slice(-2,) == "re" || this.nominative.slice(-2,) == "al"){
           return this.genitive.slice(0,-2) + "ia";
         } else {
         return this.genitive.slice(0,-2) + "a";
@@ -564,7 +566,7 @@ function startGame(){
   console.log(rNFindx);
   console.log(ranNounForm[rNFindx]);
 
-  document.getElementById("label").innerHTML = "What is the " + ranNounForm[rNFindx][2] + " of " + nounArray[0] + "?";
+  document.getElementById("label").innerHTML = "What is the " + ranNounForm[rNFindx][2] + " of " + nounArray[0] + "!\" (N.B. " + nounArray[0] + ", " + nounArray[1] + ", " + nounArray[2] + ", " + nounArray[3] + ")";
   document.getElementById("submit").onclick = function(){checkAnswer()};
   // document.getElementById("label2").style.display = "none";
   latinForm = ranNounForm[rNFindx][0].normalize('NFD').replace(/[\u0300-\u036f]/g, "");
